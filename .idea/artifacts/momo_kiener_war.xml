@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="momo_kiener:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="vwedcc.war">
-      <element id="artifact" artifact-name="momo_kiener:war exploded" />
-    </root>
-  </artifact>
-</component>

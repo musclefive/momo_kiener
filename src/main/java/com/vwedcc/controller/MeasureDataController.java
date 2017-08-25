@@ -24,13 +24,13 @@ public class MeasureDataController {
     private Logger log = Logger.getLogger(MeasureDataController.class);
 
     //映射访问路径
-//    @RequestMapping("/show")
-//    public String index(Model model){
-//        //Spring MVC会自动实例化一个Model对象用于向视图中传值
-//        model.addAttribute("message", "这是通过注解定义的一个控制器中的Action");
-//        //返回视图位置
-//        return "test_1";
-//    }
+    @RequestMapping("/test")
+    public String index(Model model){
+        //Spring MVC会自动实例化一个Model对象用于向视图中传值
+        model.addAttribute("message", "这是通过注解定义的一个控制器中的Action");
+        //返回视图位置
+        return "test_1";
+    }
     @Autowired
     private MeasureDataService measureDataService;
 
