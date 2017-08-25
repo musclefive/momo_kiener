@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.vwedcc.dao.MeasureDataDAO">
+    <resultMap id="measureDataBaseMap" type="com.vwedcc.model.MeasureData">
+        <result column="ID" property="ID" jdbcType="BIGINT"></result>
+        <result column="PartNumber" property="PartNumber" jdbcType="VARCHAR"></result>
+        <result column="Station" property="Station" jdbcType="INTEGER"></result>
+        <result column="Variety" property="Variety" jdbcType="VARCHAR"></result>
+        <result column="Date" property="Date" jdbcType="DATE"></result>
+        <result column="Ok" property="Ok" jdbcType="BOOLEAN"></result>
+    </resultMap>
+
+    <select id="selectMeasureDataById" parameterType="java.lang.Long" resultMap="measureDataBaseMap">
+        SELECT * FROM MeasurementGeneralData
+        WHERE ID = #{ID}
+    </select>
+
+    <select id="selectAllMeasureData" resultMap="measureDataBaseMap">
+        SELECT top 100 * FROM MeasurementGeneralData
+    </select>
+</mapper>
